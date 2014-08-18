@@ -1,2 +1,2 @@
-// Comments aboout grunt
+// Comments about grunt
 console.log('Hello world!');

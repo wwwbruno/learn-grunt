@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 					}
 				},
 				options: {
-        			title: 'Uglify Taks',
+        			title: 'Uglify Task',
         			message: 'Uglify task completed successful',
       			}
 			}
