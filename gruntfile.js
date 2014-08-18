@@ -24,9 +24,9 @@ module.exports = function(grunt) {
 					}
 				},
 				options: {
-        			title: 'Uglify Task',
-        			message: 'Uglify task completed successful',
-      			}
+					title: 'Uglify Task',
+					message: 'Uglify task completed successful',
+				}
 			},
 		},
 
@@ -44,9 +44,9 @@ module.exports = function(grunt) {
 				}]
 			},
 			options: {
-    			title: 'Imagemin Task',
-    			message: 'Imagemin task completed successful',
-  			}
+				title: 'Imagemin Task',
+				message: 'Imagemin task completed successful',
+			}
 		}
 
 	});
