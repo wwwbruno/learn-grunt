@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 
 	// Project configuration.
 	grunt.initConfig({
@@ -30,6 +31,18 @@ module.exports = function(grunt) {
 			},
 		},
 
+		// Concat and pre-compile sass
+		sass: {
+			dist: {
+				options: {
+					style: 'expanded'
+				},
+				files: {
+					'./css/styles.css': './src/css/*.scss'
+				}
+			}
+		},
+
 		// Optimize images
 		imagemin: {
 			dynamic: {
@@ -52,5 +65,5 @@ module.exports = function(grunt) {
 	});
 
 	// registering task default
-	grunt.registerTask( 'default', [ 'notify:uglify', 'imagemin' ] );
+	grunt.registerTask( 'default', ['notify:uglify', 'sass', 'imagemin' ] );
 };
